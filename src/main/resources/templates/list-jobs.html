@@ -14,28 +14,28 @@
     <div th:fragment="resultsTable">
         <table th:each="job : ${jobs}" class="job-listing">
             <tr>
-                <td>ID</td>
-                <td th:text="${job.id}"></td>
+                <td class="h4">ID</td>
+                <td style="color:blue" th:text="${job.id}"></td>
             </tr>
             <tr>
-                <td>Name</td>
-                <td th:text="${job.name}"></td>
+                <td class="h4">Name</td>
+                <td style="color:blue" th:text="${job.name}"></td>
             </tr>
             <tr>
-                <td>Employer</td>
-                <td th:text="${job.employer}"></td>
+                <td class="h4">Employer</td>
+                <td style="color:blue"><a th:text="${job.employer}" th:href="@{/list/jobs(column='employer',value=${job.employer})}"></a></td>
             </tr>
             <tr>
-                <td>Location</td>
-                <td th:text="${job.location}"></td>
+                <td class="h4">Location</td>
+                <td style="color:blue"><a th:text="${job.location}" th:href="@{/list/jobs(column='location',value=${job.location})}"></a></td>
             </tr>
             <tr>
-                <td>Position Type</td>
-                <td th:text="${job.positionType}"></td>
+                <td class="h4">Position Type</td>
+                <td style="color:blue"><a th:text="${job.positionType}" th:href="@{/list/jobs(column='positionType',value=${job.positionType})}"></a></td>
             </tr>
             <tr>
-                <td>Skill</td>
-                <td th:text="${job.coreCompetency}"></td>
+                <td class="h4">Skill</td>
+                <td style="color:blue"><a th:text="${job.coreCompetency}" th:href="@{/list/jobs(column='coreCompetency',value=${job.coreCompetency})}"></a></td>
             </tr>
 
         </table>
